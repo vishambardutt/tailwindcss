@@ -1,0 +1,25 @@
+npm init for package.json file
+npm install tailwindcss for tailwindcss
+npm install autoprefixer
+npm install postcss-cli
+npx tailwindcss init -p for postcss config or  tailwind.config file
+
+add below line inplace of "test in package.json file
+"build": "postcss ./src/tailwind.css -o ./public/tailwind.css"
+
+purge
+put your folder where is your html is like below in tailwind.config file
+content: [
+    'public/**/*.html'
+  ],
+npm run build
+
+
+To moving project to live 
+
+npm install win-node-env
+
+ after installation  win-node-env
+ add code "prod": "NODE_ENV=production postcss ./src/tailwind.css -o ./public/tailwind.css"
+
+ finally run: npm run prod
